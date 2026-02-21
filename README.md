@@ -7,7 +7,7 @@
 ## Command Install :
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/Bangsano/Autoinstaller-Theme-Pterodactyl/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/nezuraamira/installer-panel/main/install.sh)
 ```
 
 ## Fitur Tools :
@@ -28,7 +28,3 @@ bash <(curl -s https://raw.githubusercontent.com/Bangsano/Autoinstaller-Theme-Pt
 |                  | 12      | :white_check_mark: |
 
 _\* di atas adalah os yang saya test, selebihnya bisa di test sendiri._
-
-
-## Credits 
-- Github: [ SANO OFFICIAL ](https://github.com/Bangsano)
