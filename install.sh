@@ -21,9 +21,7 @@ display_welcome() {
   echo -e "Dilarang Keras Share Bebas."
   echo -e ""
   echo -e "𝗧𝗘𝗟𝗘𝗚𝗥𝗔𝗠 :"
-  echo -e "@batuofc"
-  echo -e "𝗪𝗛𝗔𝗧𝗦𝗔𝗣𝗣 :"
-  echo -e "+6289605983169"
+  echo -e "@nezuraamira"
   sleep 4
   clear
 }
@@ -92,15 +90,15 @@ install_theme() {
     read -r SELECT_THEME
     case "$SELECT_THEME" in
       1)
-        THEME_URL=$(echo -e "https://github.com/Bangsano/Autoinstaller-Theme-Pterodactyl/raw/main/stellar.zip")  
+        THEME_URL=$(echo -e "https://github.com/nezuraamira/installer-panel/raw/main/stellar.zip")  
         break
         ;;
       2)
-        THEME_URL=$(echo -e "https://github.com/Bangsano/Autoinstaller-Theme-Pterodactyl/raw/main/billing.zip")
+        THEME_URL=$(echo -e "https://github.com/nezuraamira/installer-panel/raw/main/billing.zip")
         break
         ;;
       3)
-        THEME_URL=$(echo -e "https://github.com/Bangsano/Autoinstaller-Theme-Pterodactyl/raw/main/enigma.zip")
+        THEME_URL=$(echo -e "https://github.com/nezuraamira/installer-panel/raw/main/enigma.zip")
         break
         ;; 
       x)
@@ -125,7 +123,7 @@ if [ "$SELECT_THEME" -eq 1 ]; then
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                                   "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
-  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+  curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
   sudo apt install -y nodejs
   sudo npm i -g yarn
   cd /var/www/pterodactyl
@@ -152,7 +150,7 @@ elif [ "$SELECT_THEME" -eq 2 ]; then
   echo -e "${BLUE}[+] =============================================== [+]${NC}"
   echo -e "                                                       "
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
-  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+  curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
   sudo apt install -y nodejs
   npm i -g yarn
   cd /var/www/pterodactyl
@@ -197,7 +195,7 @@ elif [ "$SELECT_THEME" -eq 3 ]; then
     sudo sed -i "s|LINK_CHNL|$LINK_CHNL|g" /root/pterodactyl/resources/scripts/components/dashboard/DashboardContainer.tsx
 
   sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
-  curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+  curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
   sudo apt install -y nodejs
   sudo npm i -g yarn
   cd /var/www/pterodactyl
@@ -247,7 +245,7 @@ echo -e "${BLUE}[+] =============================================== [+]${NC}"
 echo -e "                                                                   "
 
 # Unduh file tema
-wget -O /root/stellar.zip https://github.com/Bangsano/Autoinstaller-Theme-Pterodactyl/raw/main/stellar.zip
+wget -O /root/stellar.zip https://github.com/nezuraamira/installer-panel/raw/main/stellar.zip
 
 
 # Ekstrak file tema
@@ -257,7 +255,7 @@ unzip /root/stellar.zip -d /root/pterodactyl
 sudo cp -rfT /root/pterodactyl /var/www/pterodactyl
 
 # Instal Node.js dan Yarn
-curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -
+curl -sL https://deb.nodesource.com/setup_22.x | sudo -E bash -
 sudo apt install -y nodejs
 sudo npm i -g yarn
 
@@ -521,7 +519,7 @@ install_nebula_theme() {
     fi
 
     # URL Repositori (gunakan HTTPS tanpa autentikasi)
-    local REPO_URL="https://github.com/Bangsano/Autoinstaller-Theme-Pterodactyl.git"
+    local REPO_URL="https://github.com/nezuraamira/installer-panel.git"
     local TEMP_DIR="Autoinstaller-Theme-Pterodactyl"
 
     echo -e "${BLUE}🔄 Mengkloning repositori...${NC}"
@@ -560,7 +558,7 @@ install_elysium_theme() {
     echo -e "                                                       "
 
         # Menginstal Tema Elysium
-    REPO_URL="https://github.com/Bangsano/Autoinstaller-Theme-Pterodactyl.git"
+    REPO_URL="https://github.com/nezuraamira/installer-panel.git"
     TEMP_DIR="Autoinstaller-Theme-Pterodactyl"
 
         git clone "$REPO_URL" "$TEMP_DIR" || { echo "Gagal mengkloning repositori."; exit 1; }
@@ -621,7 +619,7 @@ installTheme_nightcore(){
     echo -e "${GREEN}Removing old theme if exist${RESET}"
     rm -r Pterodactyl_Nightcore_Theme > /dev/null 2>&1
     echo -e "${GREEN}Download the Theme${RESET}"
-    git clone https://github.com/Bangsano/Autoinstaller-Theme-Pterodactyl.git > /dev/null 2>&1
+    git clone https://github.com/nezuraamira/installer-panel.git > /dev/null 2>&1
     cd Autoinstaller-Theme-Pterodactyl > /dev/null 2>&1
     echo -e "${GREEN}Removing old theme resources if exist${RESET}"
     rm /var/www/pterodactyl/resources/scripts/Pterodactyl_Nightcore_Theme.css > /dev/null 2>&1
