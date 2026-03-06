@@ -7,7 +7,7 @@
 ## Command Install :
 
 ```bash
-bash <(curl -s https://raw.githubusercontent.com/nezuraamira/installer-panel/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/nezuraamira/installer-Thema/main/install.sh)
 ```
 
 ## Fitur Tools :
